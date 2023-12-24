@@ -36,19 +36,19 @@
                                 <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-primary">Edit</a>
                                 <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" style="display: inline;">
                                     @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau hapus Akun ini?')">Delete</button>
+                                    @method('HAPUS')
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus akun')">Hapus</button>
                                 </form>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4">Data Akun tidak ditemukan.</td>
+                            <td colspan="4">Data Akun tidak ada.</td>
                         </tr>
                     @endforelse
                 </tbody>
             </table>
-            <a href="{{ route('index') }}" class="btn btn-secondary">Kembali ke Beranda</a>
+            <a href="{{ route('index') }}" class="btn btn-secondary">Kembali ke Halaman Utama</a>
         </div>
     </div>
 @endsection
