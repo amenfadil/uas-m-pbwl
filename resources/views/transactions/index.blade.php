@@ -40,13 +40,13 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6">Data Transaksi tidak ditemukan.</td>
+                                <td colspan="6">Data Transaksi tidak ada.</td>
                             </tr>
                         @endforelse
                     </tbody>
                 </table>
             </div>
-            <a href="{{ route('index') }}" class="btn btn-secondary">Kembali ke Beranda</a>
+            <a href="{{ route('index') }}" class="btn btn-secondary">Kembali ke Halaman Utama</a>
         </div>
     </div>
 @endsection
