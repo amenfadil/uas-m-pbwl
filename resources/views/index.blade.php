@@ -22,45 +22,15 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header bg-info text-white">
-                    <h5 class="card-title">Daftar Akun</h5>
-                </div>
-                <div class="card-body">
-                    <table class="table table-striped">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>ID</th>
-                                <th>Nama</th>
-                                <th>Jenis</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($accounts as $account)
-                                <tr>
-                                    <td>{{ $account->id }}</td>
-                                    <td>{{ $account->nama }}</td>
-                                    <td>{{ $account->jenis }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="row mt-4">
-        <div class="col-md-12">
-            <div class="card">
+        <div class="col-md-12 mx-auto">
+            <div class="card bg-dark text-white">
                 <div class="card-header bg-warning text-white">
                     <h5 class="card-title">Daftar Transaksi</h5>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered">
-                        <thead class="thead-light">
+                    <table class="table table-bordered table-dark">
+                        <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Kategori</th>
@@ -87,11 +57,39 @@
     </div>
 
     <div class="row mt-4">
-        <div class="col-md-6">
-            <a href="{{ route('transactions.index') }}" class="btn btn-info">Ke Master Transaction</a>
+        <div class="col-md-12 mx-auto">
+            <div class="card bg-dark text-white">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title">Daftar Akun</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nama</th>
+                                <th>Jenis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($accounts as $account)
+                                <tr>
+                                    <td>{{ $account->id }}</td>
+                                    <td>{{ $account->nama }}</td>
+                                    <td>{{ $account->jenis }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            <a href="{{ route('accounts.index') }}" class="btn btn-success">Ke Master Account</a>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12 text-center">
+            <a href="{{ route('transactions.index') }}" class="btn btn-info mx-2">Buat Transaksi</a>
+            <a href="{{ route('accounts.index') }}" class="btn btn-success mx-2">Buat Akun</a>
         </div>
     </div>
 @endsection
