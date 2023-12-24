@@ -1,0 +1,13 @@
+/* resources/css/app.css */
+
+/* Override Bootstrap Variables or Add Custom Styles */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Add your custom styles below this line */
